@@ -30,8 +30,11 @@
       (lambda (fn)
         (if (and (listp fn)
                  (equal 'defun (car fn)))
+            ;; (setq fn-name (format "%s" (cdr fn)))
             (princ (concat "\n### "
                            (format "%s" (cdr fn))
+                           "\n"
+                           (documentation (cdr fn))
                            "\n"))))
       lib)))
  load-history)
