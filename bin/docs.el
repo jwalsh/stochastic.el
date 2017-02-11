@@ -8,7 +8,7 @@
   (expand-file-name ".." (file-name-directory load-file-name)))
 
 (defvar stochastic-lib-name
-   "stochastic")
+  "stochastic")
 
 (defvar stochastic-lib-file
   (expand-file-name "stochastic.el" stochastic-root-path))
@@ -37,10 +37,10 @@
                 (setq lib-prefix (regexp-quote (concat stochastic-lib-name "-")))
                 (setq lib-internal (regexp-quote (concat stochastic-lib-name "--")))
                 (setq lib-name (format "%s" (cdr fn)))
-                (if (and  (string-match-p lib-prefix lib-name)
-                          (not (string-match-p lib-internal lib-name)))
+                (if (and (string-match-p lib-prefix lib-name)
+                         (not (string-match-p lib-internal lib-name)))
                     (princ (concat "\n### "
-                                   (format "%s" (cdr fn))
+                                   lib-name
                                    "\n"
                                    (mapconcat 'identity
                                               (mapcar (lambda (word)
@@ -53,7 +53,7 @@
                                                        t))
                                               " ")
                                    "\n"))))))
-      lib)))
+        lib)))
  load-history)
 
 (provide 'docs)
