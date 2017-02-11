@@ -8,24 +8,6 @@ Stochastic modeling for Emacs.
 
 ## API
 
-### stochastic--matrixp
-Valid transition (NxN) `MATRIX.`
-
-### stochastic--box-muller
-Point of mean `MU` and standard deviation `SIGMA.`
-
-### stochastic--random
-Random number between `0` and `1.`
-
-### rnd
-Random number between `0` and `1.`
-
-### stochastic--exp
-Exponential random number with rate `RATE.`
-
-### stochastic--collate
-Transtion matrix of mapped `STATES.`
-
 ### stochastic-poiss-p
 Arrival times in a Poisson Process with rate `RATE,` positive number `TIMES,` and boolean `PATH.`
 
@@ -52,6 +34,7 @@ Pareto random variables with positive number `X-M` and `ALPHA.`
 
 ### stochastic-hist
 Historgram object given a sample of `ARR.`
+
 
 ## Development 
 
