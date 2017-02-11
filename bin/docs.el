@@ -1,12 +1,12 @@
 (defvar stochastic-root-path
   (expand-file-name ".." (file-name-directory load-file-name)))
 
-(print stochastic-root-path)
+;; (print stochastic-root-path)
 
 (defvar stochastic-lib-file
   (expand-file-name "stochastic.el" stochastic-root-path))
 
-(print stochastic-lib-file)
+;; (print stochastic-lib-file)
 
 (defvar stochastic-readme-file
   (expand-file-name "README.md" stochastic-root-path))
@@ -20,8 +20,14 @@
 
 (mapc
  (lambda (lib)
-   (when (equal (car lib) stochastic-lib-file)
-     (print lib)))
+   (when (and  (equal (car lib) stochastic-lib-file))
+     (when (listp lib)
+       (mapc
+        (lambda (fn)
+          (if (and (listp fn)
+                   (equal 'defun (car fn)))
+              (princ (concat "\n### " (format "%s" (cdr fn)) "\n"))))
+        lib))))
  load-history)
 
 ;; (let ((content (f-read stochastic-readme-template)))

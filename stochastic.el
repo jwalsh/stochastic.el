@@ -34,7 +34,7 @@
 
 ;;; Utilities
 
-(defun stochastic-matrix-valid-p (matrix)
+(defun stochastic-matrixp (matrix)
   nil)
 
 (defun stochastic-box-muller (mu sigma))

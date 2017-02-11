@@ -2,13 +2,37 @@
 
 Stochastic modeling for Emacs.
 
-## Installation 
-
 ## Installation
 
     M-x package-install stochastic
 
-## Usage
+## API
+
+### stochastic-matrixp
+
+### stochastic-box-muller
+
+### stochastic-exp
+
+### stochastic-collate
+
+### stochastic-poiss-p
+
+### stochastic-norm
+
+### stochastic-brown
+
+### stochastic-gbm
+
+### stochastic-dtmc
+
+### stochastic-ctmc
+
+### stochastic-sample
+
+### stochastic-pareto
+
+### stochastic-hist
 
 ## Development 
 
