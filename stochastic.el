@@ -36,19 +36,25 @@
 
 ;;; Utilities
 
-(defun stochastic-matrixp (matrix)
+(defun stochastic--matrixp (matrix)
   "Valid transition (NxN) MATRIX."
   nil)
 
-(defun stochastic-box-muller (mu sigma)
+(defun stochastic--box-muller (mu sigma)
   "Point of mean MU and standard deviation SIGMA.")
 
-(defun stochastic-exp (rate)
-  "Exponential random number with rate RATE."
-  (/ (log (random 100)) rate))
-;; (stochastic-exp 20)
+(defun stochastic--random ()
+  "Random number between 0 and 1."
+  (/ (random 10000) 10000.0))
 
-(defun stochastic-collate (states)
+(defalias #'rnd #'stochastic--random)
+
+(defun stochastic--exp (rate)
+  "Exponential random number with rate RATE."
+  (/ (log (rnd)) rate))
+;; (stochastic--exp 20)
+
+(defun stochastic--collate (states)
   "Transtion matrix of mapped STATES.")
 
 ;;; Export

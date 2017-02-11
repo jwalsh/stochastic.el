@@ -8,16 +8,22 @@ Stochastic modeling for Emacs.
 
 ## API
 
-### stochastic-matrixp
+### stochastic--matrixp
 Valid transition (NxN) `MATRIX.`
 
-### stochastic-box-muller
+### stochastic--box-muller
 Point of mean `MU` and standard deviation `SIGMA.`
 
-### stochastic-exp
+### stochastic--random
+Random number between `0` and `1.`
+
+### rnd
+Random number between `0` and `1.`
+
+### stochastic--exp
 Exponential random number with rate `RATE.`
 
-### stochastic-collate
+### stochastic--collate
 Transtion matrix of mapped `STATES.`
 
 ### stochastic-poiss-p
