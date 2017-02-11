@@ -33,11 +33,9 @@
         (lambda (fn)
           (if (and (listp fn)
                    (equal 'defun (car fn)))
-
               (progn
                 (setq lib-prefix (regexp-quote (concat stochastic-lib-name "-")))
                 (setq lib-internal (regexp-quote (concat stochastic-lib-name "--")))
-                ;;              (message (concat (cadr fn)))
                 (setq lib-name (format "%s" (cdr fn)))
                 (if (and  (string-match-p lib-prefix lib-name)
                           (not (string-match-p lib-internal lib-name)))
