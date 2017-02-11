@@ -1,3 +1,6 @@
+;;; docs.el --- Generate API documentation in Markdown
+;;; Code:
+
 (defvar stochastic-root-path
   (expand-file-name ".." (file-name-directory load-file-name)))
 
@@ -12,6 +15,10 @@
 
 (defvar stochastic-fn-doc-mapping (make-hash-table :test 'equal))
 
+
+;;; Commentary:
+;;
+
 (require 'stochastic stochastic-lib-file)
 
 (mapc
@@ -23,6 +30,12 @@
       (lambda (fn)
         (if (and (listp fn)
                  (equal 'defun (car fn)))
-            (princ (concat "\n### " (format "%s" (cdr fn)) "\n"))))
+            (princ (concat "\n### "
+                           (format "%s" (cdr fn))
+                           "\n"))))
       lib)))
  load-history)
+
+(provide 'docs)
+
+;;; docs.el ends here

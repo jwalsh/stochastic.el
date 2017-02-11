@@ -27,6 +27,8 @@
 
 (require 'cl-lib)
 
+;;; Code:
+
 (defgroup stochastic ()
   "Stochastic modeling."
   :prefix "stochastic-"
@@ -35,39 +37,52 @@
 ;;; Utilities
 
 (defun stochastic-matrixp (matrix)
+  "Valid transition (NxN) MATRIX."
   nil)
 
-(defun stochastic-box-muller (mu sigma))
+(defun stochastic-box-muller (mu sigma)
+  "Point of mean MU and standard deviation SIGMA.")
 
 (defun stochastic-exp (rate)
+  "Exponential random number with rate RATE."
   (/ (log (random 100)) rate))
 ;; (stochastic-exp 20)
 
-(defun stochastic-collate (states))
+(defun stochastic-collate (states)
+  "Transtion matrix of mapped STATES.")
 
 ;;; Export
 
 (defun stochastic-poiss-p (rate times path)
+  "Arrival times in a Poisson Process with rate RATE, positive number TIMES, and boolean PATH."
   (make-vector times 0))
 ;; (stochastic-poiss-p 1 5 t)
 
-(defun stochastic-norm (mu sigma num))
+(defun stochastic-norm (mu sigma num)
+  "Normal vector of MU mean and SIGMA standard deviation and NUM normal random variables provides a vector of NUM values.")
 
-(defun stochastic-brown (mu sigma time steps path))
+(defun stochastic-brown (mu sigma time steps path)
+  "Brownian motion vector of drift parameter MU, SIGMA volatility, time TIME, for a number of STEPS.  Optional PATH to obtain a single value.")
 
-(defun stochastic-gbm (s0 mu sigma time steps path))
+(defun stochastic-gbm (s0 mu sigma time steps path)
+    "Geometric Brownian motion vector of initial value S0, drift parameter MU, SIGMA volatility, time TIME, for a number of STEPS.  Optional PATH to obtain a single value.")
 
-(defun stochastic-dtmc (trans-matrix steps start path))
+(defun stochastic-dtmc (trans-matrix steps start path)
+  "Discrete-time Markov Chain of transition matrix TRANS-MATRIX of a number STEPS, given a string number START.  Optional PATH to give only a single value.")
 
-(defun stochastic-ctmc (trans-matrix steps start path))
+(defun stochastic-ctmc (trans-matrix steps start path)
+  "Continuous-time Markov Chain of transition matrix TRANS-MATRIX of a number STEPS, given a string number START.  Optional PATH to give only a single value.")
 
-(defun stochastic-sample (arr n))
+(defun stochastic-sample (arr n)
+  "Random sample from initial vector ARR of size N.")
 
 (defun stochastic-pareto (x-m alpha)
+  "Pareto random variables with positive number X-M and ALPHA."
   (/ x-m (expt (random 100) (/ 1 alpha))))
 ;; (stochastic-pareto 10 -1)
 
-(defun stochastic-hist (arr))
+(defun stochastic-hist (arr)
+  "Historgram object given a sample of ARR.")
 
 (provide 'stochastic)
 
