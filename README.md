@@ -69,4 +69,8 @@ https://en.wikipedia.org/wiki/Stochastic_process
 
 ## Poisson Process
 
-= https://www.netlab.tkk.fi/opetus/s38143/luennot/E_poisson.pdf
+- https://www.netlab.tkk.fi/opetus/s38143/luennot/E_poisson.pdf
+
+## Pareto Distribution
+
+- https://en.wikipedia.org/wiki/Pareto_distribution
