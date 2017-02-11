@@ -27,6 +27,11 @@
 
 (require 'cl-lib)
 
+(defgroup stochastic ()
+  "Stochastic modeling."
+  :prefix "stochastic-"
+  :group 'math)
+
 ;;; Utilities
 
 (defun stochastic-matrix-valid-p (matrix)
@@ -65,3 +70,5 @@
 (defun stochastic-hist (arr))
 
 (provide 'stochastic)
+
+;;; stochastic.el ends here
