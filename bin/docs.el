@@ -34,7 +34,16 @@
             (princ (concat "\n### "
                            (format "%s" (cdr fn))
                            "\n"
-                           (documentation (cdr fn))
+                           (mapconcat 'identity
+                                   (mapcar (lambda (word)
+                                           (if (equal (upcase word) word)
+                                               (concat "`" word "`")
+                                             word))
+                                         (split-string
+                                          (documentation (cdr fn))
+                                          "[ ]"
+                                          t))
+                                   " ")
                            "\n"))))
       lib)))
  load-history)
