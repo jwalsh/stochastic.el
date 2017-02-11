@@ -25,19 +25,22 @@ $ make test
 
 ## Contributing
 
+ 1. **Fork** the repo on GitHub
+ 2. Submit a **Pull request** 
+
 ## Background
 
 https://en.wikipedia.org/wiki/Stochastic_process
 
-##* Brownian Motion
+## Brownian Motion
 
-https://www.math.ucdavis.edu/~hunter/m280_09/ch5.pdf
+- https://www.math.ucdavis.edu/~hunter/m280_09/ch5.pdf
 
-##* Continuous / Discrete Time Markov Chain
+## Continuous / Discrete Time Markov Chain
 
-http://www.columbia.edu/~ks20/stochastic-I/stochastic-I-CTMC.pdf
-http://www.columbia.edu/~ks20/stochastic-I/stochastic-I-MCI.pdf
+- http://www.columbia.edu/~ks20/stochastic-I/stochastic-I-CTMC.pdf
+- http://www.columbia.edu/~ks20/stochastic-I/stochastic-I-MCI.pdf
 
-##* Poisson Process
+## Poisson Process
 
-https://www.netlab.tkk.fi/opetus/s38143/luennot/E_poisson.pdf
+= https://www.netlab.tkk.fi/opetus/s38143/luennot/E_poisson.pdf
