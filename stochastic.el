@@ -38,7 +38,10 @@
 
 (defun stochastic--matrixp (matrix)
   "Valid transition (NxN) MATRIX."
-  nil)
+  (and (arrayp matrix)
+       (> (length matrix ) 1)
+       (= (length matrix) (length (elt matrix 0)))))
+;; (stochastic--matrixp [[1 2] [3 4]])
 
 (defun stochastic--box-muller (mu sigma)
   "Point of mean MU and standard deviation SIGMA.")

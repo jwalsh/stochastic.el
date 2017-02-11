@@ -1,4 +1,7 @@
 ;;; docs.el --- Generate API documentation in Markdown
+;;; Commentary:
+;;
+
 ;;; Code:
 
 (defvar stochastic-root-path
@@ -13,14 +16,11 @@
 (defvar stochastic-readme-file
   (expand-file-name "README.md" stochastic-root-path))
 
+;; TODO
 (defvar stochastic-readme-template
   (expand-file-name "README.md.tpl" stochastic-root-path))
 
 (defvar stochastic-fn-doc-mapping (make-hash-table :test 'equal))
-
-
-;;; Commentary:
-;;
 
 (require 'stochastic stochastic-lib-file)
 

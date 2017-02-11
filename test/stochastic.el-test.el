@@ -33,5 +33,6 @@
 
 (ert-deftest stochastic-internal ()
   (should (eql t (numberp (stochastic--exp 20))))
+  (should (stochastic--matrixp [[1 2] [3 4]]))
   (should (eql t (numberp (rnd))))
   (should (eql t t)))
