@@ -1,0 +1,24 @@
+* stochastic.el
+
+Stochastic modeling for Emacs.
+
+** Usage
+
+** Contributing
+
+** Background
+
+https://en.wikipedia.org/wiki/Stochastic_process
+
+*** Brownian Motion
+
+https://www.math.ucdavis.edu/~hunter/m280_09/ch5.pdf
+
+*** Continuous / Discrete Time Markov Chain
+
+http://www.columbia.edu/~ks20/stochastic-I/stochastic-I-CTMC.pdf
+http://www.columbia.edu/~ks20/stochastic-I/stochastic-I-MCI.pdf
+
+*** Poisson Process
+
+https://www.netlab.tkk.fi/opetus/s38143/luennot/E_poisson.pdf
