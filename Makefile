@@ -12,6 +12,9 @@ test: clean-elc
 unit:
 	${CASK} exec ert-runner
 
+lint:
+	${CASK} exec ${EMACS} -Q -batch --eval="(elint-file \"stochastic.el\")"
+
 docs:
 	${CASK} exec ${EMACS} -Q --script bin/docs.el
 
