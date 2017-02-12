@@ -83,7 +83,9 @@
   "Continuous-time Markov Chain of transition matrix TRANS-MATRIX of a number STEPS, given a string number START.  Optional PATH to give only a single value.")
 
 (defun stochastic-sample (arr n)
-  "Random sample from initial vector ARR of size N.")
+  "Random sample from initial vector ARR of size N."
+  (make-vector n (ffloor (* (stochastic--random) (length arr)))))
+;; (stochastic-sample [1 2 3 4 5 6] 2)
 
 (defun stochastic-pareto (x-m alpha)
   "Pareto random variables with positive number X-M and ALPHA."

@@ -35,4 +35,5 @@
   (should (eql t (numberp (stochastic--exp 20))))
   (should (stochastic--matrixp [[1 2] [3 4]]))
   (should (eql t (numberp (rnd))))
+  (should (eql 2 (length (stochastic-sample [1 2 3 4 5 6] 2))))
   (should (eql t t)))
