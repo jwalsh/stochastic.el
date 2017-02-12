@@ -5,4 +5,5 @@
 
 (development
  (depends-on "f")
+ (depends-on "el-mock")
  (depends-on "ert-runner"))

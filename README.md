@@ -39,7 +39,8 @@ Historgram object given a sample of `ARR.`
 ## Development 
 
     brew install emacs cask
-
+    cask install 
+    make unit 
     M-x ert 
     
     
@@ -56,7 +57,7 @@ $ make test
 
 ## Background
 
-https://en.wikipedia.org/wiki/Stochastic_process
+- https://en.wikipedia.org/wiki/Stochastic_process
 
 ## Brownian Motion
 
