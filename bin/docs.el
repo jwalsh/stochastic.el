@@ -24,11 +24,12 @@
 
 (require 'stochastic stochastic-lib-file)
 
-(defun variable-name-markdown (sentence)
+(defun variable-name-markdown (docstring)
+  "Converts DOCSTRING with docstring variable names to Markdown."
   (let* ((case-fold-search nil))
     (replace-regexp-in-string "\\([[:upper:]][-[:upper:][:digit:]]+\\)"
                               "`\\1`"
-                              sentence)))
+                              docstring)))
 
 (mapc
  (lambda (lib)
