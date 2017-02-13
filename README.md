@@ -4,37 +4,38 @@ Stochastic modeling for Emacs.
 
 ## Installation
 
+Once released to [MELPA](https://melpa.org/) the package will be available as
+
     M-x package-install stochastic
 
 ## API
 
 ### stochastic-poiss-p
-Arrival times in a Poisson Process with rate `RATE,` positive number `TIMES,` and boolean `PATH.`
+Arrival times in a Poisson Process with rate `RATE`, positive number `TIMES`, and boolean `PATH`.
 
 ### stochastic-norm
 Normal vector of `MU` mean and `SIGMA` standard deviation and `NUM` normal random variables provides a vector of `NUM` values.
 
 ### stochastic-brown
-Brownian motion vector of drift parameter `MU,` `SIGMA` volatility, time `TIME,` for a number of `STEPS.` Optional `PATH` to obtain a single value.
+Brownian motion vector of drift parameter `MU`, `SIGMA` volatility, time `TIME`, for a number of `STEPS`.  Optional `PATH` to obtain a single value.
 
 ### stochastic-gbm
-Geometric Brownian motion vector of initial value `S0,` drift parameter `MU,` `SIGMA` volatility, time `TIME,` for a number of `STEPS.` Optional `PATH` to obtain a single value.
+Geometric Brownian motion vector of initial value `S0`, drift parameter `MU`, `SIGMA` volatility, time `TIME`, for a number of `STEPS`.  Optional `PATH` to obtain a single value.
 
 ### stochastic-dtmc
-Discrete-time Markov Chain of transition matrix `TRANS-MATRIX` of a number `STEPS,` given a string number `START.` Optional `PATH` to give only a single value.
+Discrete-time Markov Chain of transition matrix `TRANS-MATRIX` of a number `STEPS`, given a string number `START`.  Optional `PATH` to give only a single value.
 
 ### stochastic-ctmc
-Continuous-time Markov Chain of transition matrix `TRANS-MATRIX` of a number `STEPS,` given a string number `START.` Optional `PATH` to give only a single value.
+Continuous-time Markov Chain of transition matrix `TRANS-MATRIX` of a number `STEPS`, given a string number `START`.  Optional `PATH` to give only a single value.
 
 ### stochastic-sample
-Random sample from initial vector `ARR` of size `N.`
+Random sample from initial vector `ARR` of size N.
 
 ### stochastic-pareto
-Pareto random variables with positive number `X-M` and `ALPHA.`
+Pareto random variables with positive number `X-M` and `ALPHA`.
 
 ### stochastic-hist
-Historgram object given a sample of `ARR.`
-
+Historgram object given a sample of `ARR`.
 
 ## Development 
 

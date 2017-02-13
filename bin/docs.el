@@ -24,6 +24,12 @@
 
 (require 'stochastic stochastic-lib-file)
 
+(defun variable-name-markdown (sentence)
+  (let* ((case-fold-search nil))
+    (replace-regexp-in-string "\\([[:upper:]][-[:upper:][:digit:]]+\\)"
+                              "`\\1`"
+                              sentence)))
+
 (mapc
  (lambda (lib)
    (if (and
@@ -42,16 +48,7 @@
                     (princ (concat "\n### "
                                    lib-name
                                    "\n"
-                                   (mapconcat 'identity
-                                              (mapcar (lambda (word)
-                                                        (if (equal (upcase word) word)
-                                                            (concat "`" word "`")
-                                                          word))
-                                                      (split-string
-                                                       (documentation (cdr fn))
-                                                       "[ ]"
-                                                       t))
-                                              " ")
+                                   (variable-name-markdown (documentation (cdr fn)))
                                    "\n"))))))
         lib)))
  load-history)
